@@ -5,7 +5,7 @@ import { PiChatCircleTextLight } from "react-icons/pi";
 const Home = () => {
   return (
     <div className="relative min-h-screen mt-21 overflow-hidden" id="Home">
-      {/* 🎬 Video */}
+      
       <video
         autoPlay
         loop
@@ -21,14 +21,14 @@ const Home = () => {
 
       <header className="relative flex  justify-center min-h-screen px-4 sm:px-6 lg:px-10 text-white">
         {/* Content */}
-        <section className="flex flex-col items-center mt-[15%] lg:text-center  max-w-4xl w-full">
+        <section className="flex flex-col items-center mt-[25%]   text-start lg:mt-[15%]  lg:text-center  max-w-4xl w-full">
           {/* Badge */}
-          <p className="bg-red-400 text-xs sm:text-sm font-semibold rounded px-4 py-1 mb-4">
+          <p className="bg-red-400 text-lg sm:text-sm font-semibold rounded px-4 py-1 mb-4">
             COMMIT TO BE FIT.
           </p>
 
           {/* 🔥 Heading */}
-          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl font-semibold leading-relaxed sm:leading-snug">
+          <h1 className="text-[27px] sm:text-3xl md:text-3xl lg:text-3xl font-semibold leading-relaxed sm:leading-snug">
             <span className="text-blue-400">Bringing quality healthcare</span>{" "}
             to you and your family with trusted care, modern technology, and a
             commitment to your well-being every{" "}
