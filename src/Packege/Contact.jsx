@@ -32,29 +32,51 @@ function Contact() {
 
   // ================= HANDLE SUBMIT =================
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+ const handleSubmit = async (e) => {
+   e.preventDefault();
 
-    try {
-      const response = await api.post("/api/contact", formData);
+   // NAME VALIDATION
+   if (!formData.name.trim()) {
+     setMsg("Name is required");
+     return;
+   }
 
-      console.log(response.data);
+   // EMAIL VALIDATION
+   const emailRegex = /^[a-z][^\s@]*@[^\s@]+\.[^\s@]+$/;
 
-      setMsg("Appointment Booked Successfully ✅");
+   if (!emailRegex.test(formData.email)) {
+     setMsg("Enter a valid email");
+     return;
+   }
 
-      setFormData({
-        name: "",
-        email: "",
-        phoneNumber: "",
-        date: "",
-        allType: "",
-      });
-    } catch (error) {
-      console.error(error);
+   // PHONE VALIDATION
+   const phoneRegex = /^[0-9]{10}$/;
 
-      setMsg(error.response?.data?.message || "Something went wrong ❌");
-    }
-  };
+   if (!phoneRegex.test(formData.phoneNumber)) {
+     setMsg("Phone number must be 10 digits");
+     return;
+   }
+
+   try {
+     const response = await api.post("/api/contact", formData);
+
+     console.log(response.data);
+
+     setMsg("Appointment Booked Successfully ✅");
+
+     setFormData({
+       name: "",
+       email: "",
+       phoneNumber: "",
+       date: "",
+       allType: "",
+     });
+   } catch (error) {
+     console.error(error);
+
+     setMsg(error.response?.data?.message || "Something went wrong ❌");
+   }
+ };
 
   return (
     <section
