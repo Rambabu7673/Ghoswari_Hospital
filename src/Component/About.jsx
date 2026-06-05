@@ -3,7 +3,7 @@ import React from "react";
 const About = ({ features }) => {
  
   return (
-    <section className='relative min-h-screen overflow-hidden bg-fixed bg-center bg-cover bg-[url("src/assets/image.png")]' >
+    <section className='relative min-h-screen overflow-hidden bg-fixed bg-center bg-cover bg-[url("src/assets/image.png")]'>
       {/* DARK OVERLAY */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#050816]/80 via-black/70 to-[#050816]/95"></div>
 
@@ -34,17 +34,17 @@ const About = ({ features }) => {
         </p>
 
         {/* FEATURES */}
-        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-7xl">
+        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-7xl ">
           {features.map((elam, idx) => {
             const Icon = elam.icon;
 
             return (
               <div
                 key={idx}
-                className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-md p-8 text-center text-white hover:-translate-y-3 hover:border-cyan-400/40 transition-all duration-500 shadow-xl animate-fadeUp"
+                className="group relative rounded-3xl border border-white/10 bg-white/5 backdrop-blur-md p-8 text-center text-white hover:scale-[1.02] hover:border-cyan-400/40 transition-all duration-500 shadow-xl animate-fadeUp "
               >
                 {/* CARD GLOW */}
-                <div className="absolute inset-0 bg-gradient-to-b from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                <div className="absolute inset-0 rounded-3xl bg-gradient-to-b from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
 
                 {/* ICON */}
                 <div className="relative flex justify-center">

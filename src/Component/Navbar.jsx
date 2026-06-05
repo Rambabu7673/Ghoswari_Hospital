@@ -61,8 +61,6 @@ const Navbar = () => {
                       >
                         {item}
                       </Link>
-
-
                     ) : (
                       <a
                         href={item === "Home" ? "/#Home" : `/#${item}`}
@@ -152,11 +150,13 @@ const Navbar = () => {
           )}
 
           {/* BUTTON */}
-          <button className="mt-5 px-7 py-4 rounded-2xl bg-gradient-to-r from-cyan-400 to-cyan-600 text-black font-bold shadow-[0_0_30px_rgba(28,182,187,0.5)]">
-            <span className="flex items-center justify-center gap-3">
-              <FiPhoneCall />
-              Call Now
-            </span>
+          <button className="px-7 py-3 rounded-2xl bg-gradient-to-r from-cyan-400 to-cyan-600 text-black font-bold hover:scale-105 transition-all duration-300 shadow-[0_0_30px_rgba(28,182,187,0.5)]">
+            <a href="tel:+919835434240">
+              <span className="flex items-center gap-3">
+                <FiPhoneCall />
+                Enquire Now
+              </span>
+            </a>
           </button>
         </div>
       </div>

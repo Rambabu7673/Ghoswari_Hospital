@@ -88,7 +88,7 @@ const Home = () => {
         </section>
 
         {/* CHAT BUTTON */}
-        <div className="fixed bottom-6 right-4 sm:right-6 lg:right-10 z-50 animate-bounceSlow">
+        <div className="fixed bottom-6 right-4 sm:right-6 lg:right-10  z-[999999] animate-bounceSlow">
           <a
             href="https://wa.me/919835434240?text=Hello%20Ghoswari%20Hospital%20I%20need%20help"
             target="_blank"
