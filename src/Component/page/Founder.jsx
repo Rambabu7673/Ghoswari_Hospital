@@ -13,7 +13,7 @@ const Founder = () => {
         <img
           src={asset}
           alt="background"
-          className="w-full h-full object-cover scale-110 blur-sm opacity-20 animate-slowZoom"
+          className="w-full lg:w-1/2 h-full lg:[20rem] object-cover scale-110 blur-sm opacity-20 animate-slowZoom"
         />
       </div>
 
@@ -82,7 +82,7 @@ const Founder = () => {
               <div className="absolute bottom-0 left-0 w-full p-6">
                 <div className="backdrop-blur-xl bg-white/10 border border-white/10 rounded-2xl p-5">
                   <h2 className="text-2xl lg:text-3xl font-black text-white">
-                    Dr. Raju Kumar
+                    Dr  Raju Kumar
                   </h2>
 
                   <p className="text-cyan-300 mt-1">Critical Care Specialist</p>
@@ -99,7 +99,7 @@ const Founder = () => {
 
             <div className="relative  space-y-6">
               <p className="text-gray-300 leading-8 text-sm sm:text-base lg:text-lg">
-                Ghoswari Hospital is a trusted and rapidly growing healthcare
+                SKM Multi Speciality Hospital is a trusted and rapidly growing healthcare
                 center committed to delivering high-quality medical services
                 with modern technology, skilled professionals, and a
                 patient-first approach.
@@ -107,7 +107,7 @@ const Founder = () => {
 
               <p className="text-gray-300 leading-8 text-sm sm:text-base lg:text-lg">
                 Founded by
-                <span className="text-cyan-400 font-bold"> Dr. Raju Kumar</span>
+                <span className="text-cyan-400 font-bold">   Raju Kumar</span>
                 , a highly experienced Critical Care Specialist, the hospital
                 continues to transform lives through compassionate and advanced
                 healthcare.

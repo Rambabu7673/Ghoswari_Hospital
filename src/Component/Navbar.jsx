@@ -25,25 +25,78 @@ const Navbar = () => {
                 <div className="absolute inset-0 bg-cyan-400/30 blur-2xl rounded-full"></div>
 
                 {/* ICON */}
-                <div className="relative w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-400 to-cyan-600 flex justify-center items-center shadow-[0_0_30px_rgba(28,182,187,0.5)]">
-                  <svg viewBox="0 0 60 60" className="w-8 h-8">
-                    <circle cx="30" cy="30" r="26" fill="white" />
+                <div className="relative lg:w-16 lg:h-16 rounded-2xl bg-gradient-to-br from-[#0f172a] via-cyan-700 to-cyan-400 flex justify-center items-center shadow-[0_0_40px_rgba(34,211,238,0.5)] border border-cyan-300/20">
+                  <svg
+                    viewBox="0 0 200 200"
+                    className="w-11 h-11"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    {/* OUTER RING */}
+                    <circle
+                      cx="100"
+                      cy="100"
+                      r="82"
+                      stroke="white"
+                      strokeWidth="6"
+                      fill="none"
+                      opacity="0.15"
+                    />
 
-                    <rect x="26" y="18" width="8" height="24" fill="#1cb6bb" />
+                    {/* HEART */}
+                    <path
+                      d="M100 145 
+         C40 105, 35 60, 70 50
+         C88 45, 100 60, 100 60
+         C100 60, 112 45, 130 50
+         C165 60, 160 105, 100 145"
+                      fill="white"
+                      opacity="0.95"
+                    />
 
-                    <rect x="18" y="26" width="24" height="8" fill="#1cb6bb" />
+                    {/* SKM TEXT */}
+                    <text
+                      x="100"
+                      y="104"
+                      textAnchor="middle"
+                      fill="#06b6d4"
+                      fontSize="28"
+                      fontWeight="900"
+                      fontFamily="Arial"
+                      letterSpacing="3"
+                    >
+                      SKM
+                    </text>
+
+                    {/* MEDICAL PLUS */}
+                    <rect
+                      x="92"
+                      y="25"
+                      width="16"
+                      height="45"
+                      rx="4"
+                      fill="white"
+                    />
+
+                    <rect
+                      x="78"
+                      y="39"
+                      width="45"
+                      height="16"
+                      rx="4"
+                      fill="white"
+                    />
                   </svg>
                 </div>
               </div>
 
               {/* TEXT */}
               <div>
-                <h1 className="text-xl lg:text-2xl font-black text-white tracking-wide">
-                  Ghoswari
+                <h1 className="text-xl lg:text-2xl text-lg font-black text-white tracking-wide">
+                   MULTI SPECIALITY
                 </h1>
 
                 <p className="text-[10px] uppercase tracking-[6px] text-cyan-300">
-                  Hospital
+                  HOSPITAL
                 </p>
               </div>
             </div>
@@ -108,8 +161,10 @@ const Navbar = () => {
       >
         {/* TOP */}
         <div className="flex justify-between items-center p-6 border-b border-white/10">
-          <div>
-            <h1 className="text-2xl font-black text-white">Ghoswari</h1>
+          <div className="">
+            <h1 className="lg:text-2xl font-black text-white">
+               MULTI SPECIALITY
+            </h1>
 
             <p className="text-[10px] tracking-[5px] uppercase text-cyan-300">
               Hospital
@@ -118,7 +173,7 @@ const Navbar = () => {
 
           <button
             onClick={() => setOpen(false)}
-            className="text-white text-4xl"
+            className="text-white  text-4xl"
           >
             <HiX />
           </button>

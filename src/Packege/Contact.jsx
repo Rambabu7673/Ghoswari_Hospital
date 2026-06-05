@@ -288,12 +288,21 @@ function Contact() {
           <div className="relative overflow-hidden rounded border border-white/10 shadow-[0_10px_50px_rgba(0,0,0,0.4)]">
             {/* MAP LABEL */}
             <div className="absolute top-4 left-4 z-10 px-4 py-2 rounded bg-[#050816]/80 backdrop-blur-xl border border-white/10 text-white">
-              <h3 className="font-bold text-sm">Ghoswari Hospital</h3>
+              <h3 className="font-bold text-sm">
+               SKM  Shree Kanti Manohar Multispeciality Hospital
+              </h3>
 
               <p className="text-xs text-gray-300">Bihar, India</p>
             </div>
-
             <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3420.507794494954!2d85.16184806414202!3d25.58624747272894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed590044a23c3b%3A0x60bf0898e4cb0493!2sShree%20Kanti%20Manohar%20Multispeciality%20Hospital!5e1!3m2!1sen!2sin!4v1780674859091!5m2!1sen!2sin"
+              width="750"
+              height="450"
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+            {/* <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13708.294286756613!2d85.87070438715823!3d25.355587399999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f26d42066e2d6d%3A0xb315a6f097bf11f7!2sGhoswari%20emergency%20hospital!5e1!3m2!1sen!2sin!4v1780387855599!5m2!1sen!2sin"
               width="750"
               height="450"
@@ -301,7 +310,7 @@ function Contact() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
+            ></iframe> */}
           </div>
         </div>
       </div>
