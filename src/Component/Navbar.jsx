@@ -127,17 +127,34 @@ const Navbar = () => {
         {/* LINKS */}
         <div className="flex flex-col gap-8 px-8 py-10">
           {["Home", "About", "Doctors", "Gallery", "Contact"].map(
-            (item, idx) =>
-              item === "Doctors" ? (
-                <Link
-                  key={idx}
-                  to="/Doctors"
-                  onClick={() => setOpen(false)}
-                  className="text-xl text-gray-300 hover:text-cyan-400 font-semibold transition-all duration-300"
-                >
-                  {item}
-                </Link>
-              ) : (
+            (item, idx) => {
+              if (item === "Doctors") {
+                return (
+                  <Link
+                    key={idx}
+                    to="/Doctors"
+                    onClick={() => setOpen(false)}
+                    className="text-xl text-gray-300 hover:text-cyan-400 font-semibold transition-all duration-300"
+                  >
+                    {item}
+                  </Link>
+                );
+              }
+
+              if (item === "Gallery") {
+                return (
+                  <Link
+                    key={idx}
+                    to="/Gallery"
+                    onClick={() => setOpen(false)}
+                    className="text-xl text-gray-300 hover:text-cyan-400 font-semibold transition-all duration-300"
+                  >
+                    {item}
+                  </Link>
+                );
+              }
+
+              return (
                 <a
                   key={idx}
                   href={item === "Home" ? "/#Home" : `/#${item}`}
@@ -146,7 +163,8 @@ const Navbar = () => {
                 >
                   {item}
                 </a>
-              ),
+              );
+            },
           )}
 
           {/* BUTTON */}
