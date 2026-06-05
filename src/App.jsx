@@ -8,16 +8,14 @@ import { FaHospital } from "react-icons/fa";
 import { FaCheckCircle } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { FaCalendarCheck } from "react-icons/fa";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Services from "./Component/Services";
+import { Routes, Route } from "react-router-dom";
 import assets1 from "./assets/part1.webp";
 import assets2 from "./assets/part2.webp";
-import Connect from "./Component/Connect.";
-import Product from "./Component/Product";
+
 import items from "./assets/Pay.avif";
 import items2 from "./assets/appointment.jpg";
 import Doc1 from "./assets/Doc1.avif";
-import Doc2 from "./assets/Doc2.jpg";
+import Doc2 from "./assets/Doc2.avif";
 import Doc3 from "./assets/Doc3.avif";
 import Doc4 from "./assets/Doc4.avif";
 import Doc5 from "./assets/Doc5.avif";
@@ -26,12 +24,14 @@ import Doc7 from "./assets/Doc7.avif";
 import Doc8 from "./assets/Doc8.avif";
 import Doc9 from "./assets/Doc9.avif";
 import Doc10 from "./assets/Doc10.avif";
-import Trusted from "./Component/Trusted";
-import Medical_Packege from "./Packege/Medical_Packege";
-import Founder from "./Component/page/Founder";
-import Contact from "./Packege/Contact";
 import Footer from "./Footer/Footer";
 import Register from './Component/page/Register'
+import ViewDisplay from "./Component/page/ViewDisplay";
+import DoctorPanel from "./Component/page/DoctorPanel";
+import Container from "./Container/Container";
+import Founder from "./Component/page/Founder";
+import AdminPanle from './Component/Admin/AdminPanle.jsx'
+import PateintGallery from "./Component/page/PateintGallery.jsx";
 
 const App = () => {
   const features = [
@@ -163,14 +163,23 @@ const App = () => {
     <>
       <Navbar />
       <div>
-        <Home />
-        <About features={features} />
-        <Services mainContent={mainContent} latestProduct={latestProduct} />
-        <Connect />
-        <Trusted />
-        <Medical_Packege />
-        <Founder />
-        <Contact />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Container
+                mainContent={mainContent}
+                latestProduct={latestProduct}
+                features={features}
+              />
+            }
+          />
+          <Route path="/gallery"element={<PateintGallery/>} />
+          <Route path="/displayView" element={<ViewDisplay />} />
+          <Route path="/Doctors" element={<DoctorPanel />} />
+      <Route path="/admin" element={<AdminPanle/>}/>
+          <Route path="/founder" element={<Founder/>}/>
+        </Routes>
         <Footer />
         {/* <Product  /> */}
       </div>

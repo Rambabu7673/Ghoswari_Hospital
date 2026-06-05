@@ -1,95 +1,147 @@
 import React from "react";
-import { FaInstagram, FaTwitter, FaGlobe } from "react-icons/fa";
+
+import {
+  FaInstagram,
+  FaTwitter,
+  FaGlobe,
+  FaPhoneAlt,
+  FaMapMarkerAlt,
+  FaHeartbeat,
+  FaUserMd,
+  FaAmbulance,
+  FaClinicMedical,
+} from "react-icons/fa";
+
 import { MdEmail } from "react-icons/md";
+
+import { GiMedicines } from "react-icons/gi";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-gray-400 font-sans">
-      <div className="max-w-7xl mx-auto px-6 py-12">
-        {/* Logo */}
-        <h2 className="flex items-center gap-3 mb-8 group cursor-pointer">
-          <span className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-cyan-400 text-white text-2xl font-extrabold shadow-lg transition-transform duration-300 group-hover:scale-110">
+    <footer className="bg-gradient-to-br from-[#031525] via-[#06243a] to-[#04111d] text-gray-300 border-t border-cyan-500/20">
+      <div className="max-w-7xl mx-auto px-6 py-14">
+        {/* LOGO */}
+        <div className="flex items-center gap-4 mb-12 group cursor-pointer">
+          <div className="w-14 h-14 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center text-white text-3xl font-black shadow-lg group-hover:scale-110 transition duration-300">
             G
-          </span>
+          </div>
 
-          <span className="text-2xl font-extrabold text-white tracking-wide group-hover:text-blue-400 transition">
+          <h1 className="text-3xl font-black text-white tracking-wide group-hover:text-cyan-400 transition duration-300">
             hoswari Hospital
-          </span>
-        </h2>
+          </h1>
+        </div>
 
-        {/* Grid */}
+        {/* GRID */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-          {/* About */}
+          {/* ABOUT */}
           <div>
-            <h3 className="text-white text-lg font-semibold mb-3 border-l-4 border-blue-500 pl-2">
+            <h2 className="text-xl font-bold text-white border-l-4 border-cyan-400 pl-3 mb-5 flex items-center gap-2">
+              <FaHeartbeat className="text-cyan-400" />
               About Us
-            </h3>
-            <p className="text-md leading-relaxed text-white font-semibold tracking-wide">
-              Ghoswari Hospital delivers trusted and advanced healthcare
-              services with experienced doctors, modern technology, and
-              patient-first care approach.
+            </h2>
+
+            <p className="leading-8 text-sm sm:text-base text-gray-300">
+              Ghoswari Hospital provides trusted healthcare services with
+              experienced doctors, advanced medical technology, and a
+              patient-first care approach for better treatment.
             </p>
           </div>
 
-          {/* Services */}
+          {/* SERVICES */}
           <div>
-            <h3 className="text-white text-lg font-semibold mb-3 border-l-4 border-blue-500 pl-2">
+            <h2 className="text-xl font-bold text-white border-l-4 border-cyan-400 pl-3 mb-5 flex items-center gap-2">
+              <FaClinicMedical className="text-cyan-400" />
               Our Services
-            </h3>
-            <ul className="space-y-2 text-md text-white font-sans tracking-wider">
-              <li className="hover:text-blue-900 cursor-pointer transition">Emergency Care</li>
-              <li className="hover:text-blue-900 cursor-pointer transition">Cardiology</li>
-              <li className="hover:text-blue-900 cursor-pointer transition">Neurology</li>
-              <li className="hover:text-blue-900 cursor-pointer transition">Orthopedics</li>
-              <li className="hover:text-blue-900 cursor-pointer transition">Diagnostics</li>
-              <li className="hover:text-blue-900 cursor-pointer transition">24/7 Pharmacy</li>
+            </h2>
+
+            <ul className="space-y-3 text-sm sm:text-base">
+              <li className="flex items-center gap-3 hover:text-cyan-400 transition duration-300 cursor-pointer">
+                <FaAmbulance className="text-cyan-400" />
+                Emergency Care
+              </li>
+
+              <li className="flex items-center gap-3 hover:text-cyan-400 transition duration-300 cursor-pointer">
+                <FaHeartbeat className="text-cyan-400" />
+                Cardiology
+              </li>
+
+              <li className="flex items-center gap-3 hover:text-cyan-400 transition duration-300 cursor-pointer">
+                <FaUserMd className="text-cyan-400" />
+                Neurology
+              </li>
+
+              <li className="flex items-center gap-3 hover:text-cyan-400 transition duration-300 cursor-pointer">
+                <FaClinicMedical className="text-cyan-400" />
+                Orthopedics
+              </li>
+
+              <li className="flex items-center gap-3 hover:text-cyan-400 transition duration-300 cursor-pointer">
+                <GiMedicines className="text-cyan-400" />
+                24/7 Pharmacy
+              </li>
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* CONTACT */}
           <div>
-            <h3 className="text-white text-lg font-semibold mb-3 border-l-4 border-blue-500 pl-2">
+            <h2 className="text-xl font-bold text-white border-l-4 border-cyan-400 pl-3 mb-5">
               Contact Info
-            </h3>
+            </h2>
 
-            <p className="text-md text-white font-sans tracking-wider leading-relaxed mb-3">
-              📍 Patna, Bihar <br />
-              📞 +91 9876543210
-            </p>
+            <div className="space-y-4 text-sm sm:text-base">
+              <p className="flex items-center gap-3 hover:text-cyan-400 transition duration-300">
+                <FaMapMarkerAlt className="text-cyan-400" />
+                Patna, Bihar
+              </p>
 
-            <div className="space-y-2 text-md text-white font-sans tracking-wider cursor-pointer">
-              <p className="flex items-center gap-2 hover:text-white transition">
-                <MdEmail /> info@ghoswarihospital.com
+              <p className="flex items-center gap-3 hover:text-cyan-400 transition duration-300">
+                <FaPhoneAlt className="text-cyan-400" />
+                +91 9876543210
               </p>
-              <p className="flex items-center gap-2 hover:text-pink-400 transition">
-                <FaInstagram /> @ghoswarihospital
+
+              <p className="flex items-center gap-3 hover:text-cyan-400 transition duration-300">
+                <MdEmail className="text-cyan-400 text-xl" />
+                info@ghoswarihospital.com
               </p>
-              <p className="flex items-center gap-2 hover:text-blue-400 transition">
-                <FaTwitter /> @ghoswarihosp
+
+              <p className="flex items-center gap-3 hover:text-pink-400 transition duration-300 cursor-pointer">
+                <FaInstagram className="text-pink-400" />
+                @ghoswarihospital
               </p>
-              <p className="flex items-center gap-2 hover:text-green-400 transition">
-                <FaGlobe /> www.ghoswarihospital.com
+
+              <p className="flex items-center gap-3 hover:text-blue-400 transition duration-300 cursor-pointer">
+                <FaTwitter className="text-blue-400" />
+                @ghoswarihosp
+              </p>
+
+              <p className="flex items-center gap-3 hover:text-green-400 transition duration-300 cursor-pointer">
+                <FaGlobe className="text-green-400" />
+                www.ghoswarihospital.com
               </p>
             </div>
           </div>
 
-          {/* Extra */}
+          {/* WHY CHOOSE US */}
           <div>
-            <h3 className="text-white text-lg font-semibold mb-3 border-l-4 border-blue-500 pl-2">
+            <h2 className="text-xl font-bold text-white border-l-4 border-cyan-400 pl-3 mb-5 flex items-center gap-2">
+              <FaUserMd className="text-cyan-400" />
               Why Choose Us
-            </h3>
-            <ul className="space-y-2 text-md text-white tracking-wider font-sans">
+            </h2>
+
+            <ul className="space-y-3 text-sm sm:text-base text-gray-300">
               <li>✔ 24/7 Emergency Support</li>
               <li>✔ Expert Medical Team</li>
               <li>✔ Advanced Equipment</li>
-              <li>✔ Easy Appointment</li>
+              <li>✔ Easy Appointment Booking</li>
+              <li>✔ Patient-Centered Care</li>
             </ul>
           </div>
         </div>
 
-        {/* Bottom */}
-        <div className="border-t border-gray-800 mt-10 pt-5 text-center text-md  text-gray-500 tracking-wide">
-          © {new Date().getFullYear()} Ghoswari Hospital • Designed Rambabu Kumar
+        {/* BOTTOM */}
+        <div className="border-t border-cyan-500/10 mt-12 pt-6 text-center text-sm sm:text-base text-gray-400">
+          © {new Date().getFullYear()} Ghoswari Hospital • Designed by Rambabu
+          Kumar
         </div>
       </div>
     </footer>

@@ -1,97 +1,183 @@
+import React from "react";
+import asset from "../../assets/raju.jpg";
+
 const Founder = () => {
   return (
-    <section className="relative py-24 px-4 sm:px-6 lg:px-12 overflow-hidden"  id="About">
-      {/* Background Image */}
+    <section
+      className="relative py-20 px-4 sm:px-6 lg:px-12 overflow-hidden bg-[#030712]"
+      id="About"
+    >
+      {/* ================= BACKGROUND IMAGE ================= */}
+
       <div className="absolute inset-0">
         <img
-          src="/hospital.jpg"
-          alt="bg"
-          className="w-full h-full object-cover scale-110 blur-sm"
+          src={asset}
+          alt="background"
+          className="w-full h-full object-cover scale-110 blur-sm opacity-20 animate-slowZoom"
         />
       </div>
 
-      {/* Gradient Overlay (Multi Layer) */}
-      <div className="absolute inset-0 bg-gray-300 text-black"></div>
+      {/* ================= OVERLAY ================= */}
 
-      {/* Color Accent Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-500/10 to-blue-600/20"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-[#030712]/95 via-[#030712]/90 to-[#030712]"></div>
 
-      {/* Glow Effects */}
-      <div className="absolute top-20 left-20 w-72 h-72 bg-blue-400 rounded-full blur-3xl opacity-20"></div>
-      <div className="absolute bottom-20 right-20 w-72 h-72 bg-purple-400 rounded-full blur-3xl opacity-20"></div>
+      {/* ================= GLOW EFFECT ================= */}
 
-      {/* Content Wrapper */}
-      <div className="relative z-10 max-w-7xl mx-auto space-y-20">
-        {/* Heading */}
-        <div className="text-center text-black">
-          <h2 className="text-3xl sm:text-4xl font-bold">Ghoswari Hospital</h2>
-          <p className="mt-4 max-w-2xl mx-auto text-sm sm:text-base text-black">
+      <div className="absolute top-10 left-10 w-[18rem] h-[18rem] bg-cyan-400/10 blur-[120px] rounded-full animate-pulse"></div>
+
+      <div className="absolute bottom-10 right-10 w-[18rem] h-[18rem] bg-blue-500/10 blur-[130px] rounded-full animate-pulse"></div>
+
+      {/* ================= CONTENT ================= */}
+
+      <div className="relative z-10 max-w-7xl mx-auto">
+        {/* ================= TOP HEADING ================= */}
+
+        <div className="text-center mb-16 animate-fadeUp">
+          {/* TAG */}
+          <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-cyan-400/20 bg-cyan-400/10 backdrop-blur-xl mb-6">
+            <div className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></div>
+
+            <p className="text-[10px] tracking-[5px] uppercase text-cyan-300 font-bold">
+              About Founder
+            </p>
+          </div>
+
+          {/* HEADING */}
+          <h2 className="text-[35px] sm:text-[50px] lg:text-[70px] font-black text-white leading-tight">
+            Meet The Visionary
+            <br />
+            <span className="bg-gradient-to-r from-cyan-300 to-cyan-500 bg-clip-text text-transparent">
+              Behind Ghoswari Hospital
+            </span>
+          </h2>
+
+          {/* TEXT */}
+          <p className="mt-6 max-w-3xl mx-auto text-gray-400 text-sm sm:text-base lg:text-lg leading-8">
             Delivering trusted healthcare with compassion, innovation, and
-            excellence.
+            excellence for every patient.
           </p>
         </div>
 
-        {/* Glass Card Section */}
+        {/* ================= MAIN GRID ================= */}
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-          {/* Image */}
-          <div className="overflow-hidden rounded-3xl shadow-2xl">
-            <img
-              src="https://scontent.fpat11-3.fna.fbcdn.net/v/t39.30808-6/506137497_1348339573291859_3797650608226071240_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=7b2446&_nc_ohc=iNWbBAQV2TAQ7kNvwEz8pQM&_nc_oc=Adq1ICRGGGbojSmDS2ck8vq6Bv3_SHjxUESO8qwu3Y8JQWe-0bzISzF-B2m869rK9A69xZy67ScOg0gB-WFXmQ1M&_nc_zt=23&_nc_ht=scontent.fpat11-3.fna&_nc_gid=Gde7yH2wGyhneOVklpa1kg&_nc_ss=7a3a8&oh=00_Af2DYP2mDFcH6TKUFusmpHINqVZJN_tsMq8ECytlTgUw1Q&oe=69E9B2C4"
-              alt="Hospital"
-              className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[550px] object-cover hover:scale-105 transition duration-500"
-            />
+          {/* ================= IMAGE ================= */}
+
+          <div className="relative group animate-slideLeft">
+            {/* IMAGE GLOW */}
+            <div className="absolute -inset-4 bg-cyan-400/10 blur-3xl rounded-[3rem] opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
+
+            {/* IMAGE CARD */}
+            <div className="relative overflow-hidden rounded-[2.5rem] border border-white/10 shadow-[0_20px_80px_rgba(0,0,0,0.5)]">
+              <img
+                src={asset}
+                alt="Founder Dr. Raju Kumar"
+                className="w-full h-[24rem] sm:h-[30rem] lg:h-[42rem] object-cover group-hover:scale-105 transition-all duration-700"
+              />
+
+              {/* OVERLAY */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+
+              {/* NAME CARD */}
+              <div className="absolute bottom-0 left-0 w-full p-6">
+                <div className="backdrop-blur-xl bg-white/10 border border-white/10 rounded-2xl p-5">
+                  <h2 className="text-2xl lg:text-3xl font-black text-white">
+                    Dr. Raju Kumar
+                  </h2>
+
+                  <p className="text-cyan-300 mt-1">Critical Care Specialist</p>
+                </div>
+              </div>
+            </div>
           </div>
 
-          {/* Content Glass */}
-          <div className="backdrop-blur-md bg-white/10 border border-white/20 rounded-3xl p-6 sm:p-8 text-black shadow-xl">
-            <p className="text-sm sm:text-base md:text-lg leading-7  mb-4">
-              Ghoswari Hospital is a trusted and rapidly growing healthcare
-              center committed to delivering high-quality medical services with
-              modern technology, skilled professionals, and a patient-first
-              approach. The hospital has become a symbol of trust and
-              reliability in providing safe and effective treatment.
-            </p>
+          {/* ================= CONTENT CARD ================= */}
 
-            <p className="text-sm sm:text-base md:text-lg leading-7 mb-4">
-              Founded by <b>Dr. Raju Kumar</b>, a highly experienced Critical
-              Care Specialist, the hospital is driven by a mission to save lives
-              and provide advanced medical care with compassion. His expertise
-              in handling critical cases has strengthened the hospital’s
-              reputation in the region.
-            </p>
+          <div className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/5 backdrop-blur-2xl p-6 sm:p-8 lg:p-10 shadow-[0_20px_80px_rgba(0,0,0,0.45)] animate-slideRight">
+            {/* GLOW */}
+            <div className="absolute top-0 right-0 w-[12rem] h-[12rem] bg-cyan-400/10 blur-[100px] rounded-full z-99"></div>
 
-            <p className="text-sm sm:text-base md:text-lg leading-7 mb-4">
-              Over the years, Ghoswari Hospital has evolved with advanced
-              infrastructure, modern equipment, and a dedicated medical team,
-              offering services like emergency care, ICU support, diagnostics,
-              and general medicine.
-            </p>
+            <div className="relative  space-y-6">
+              <p className="text-gray-300 leading-8 text-sm sm:text-base lg:text-lg">
+                Ghoswari Hospital is a trusted and rapidly growing healthcare
+                center committed to delivering high-quality medical services
+                with modern technology, skilled professionals, and a
+                patient-first approach.
+              </p>
 
-            <p className="text-sm sm:text-base md:text-lg leading-7">
-              The hospital’s goal is to make healthcare accessible, affordable,
-              and efficient for everyone. With its digital presence, it is now
-              easier for patients to connect and receive quality care.
-            </p>
+              <p className="text-gray-300 leading-8 text-sm sm:text-base lg:text-lg">
+                Founded by
+                <span className="text-cyan-400 font-bold"> Dr. Raju Kumar</span>
+                , a highly experienced Critical Care Specialist, the hospital
+                continues to transform lives through compassionate and advanced
+                healthcare.
+              </p>
+
+              <p className="text-gray-300 leading-8 text-sm sm:text-base lg:text-lg">
+                With advanced infrastructure, emergency care, ICU support,
+                diagnostics, and dedicated specialists, the hospital has become
+                a symbol of trust and excellence in the region.
+              </p>
+
+              <p className="text-gray-300 leading-8 text-sm sm:text-base lg:text-lg">
+                Our mission is to make healthcare accessible, affordable, and
+                efficient for every patient while embracing digital innovation
+                and modern treatment.
+              </p>
+
+              {/* BUTTONS */}
+              <div className="flex flex-wrap gap-4 pt-4">
+                <button className="px-7 py-3 rounded-2xl bg-gradient-to-r from-cyan-400 to-cyan-600 text-black font-bold hover:scale-105 transition-all duration-300 shadow-[0_0_30px_rgba(28,182,187,0.35)]">
+                  Explore Services
+                </button>
+
+                <button className="px-7 py-3 rounded-2xl border border-white/10 bg-white/5 text-white hover:bg-white/10 transition-all duration-300">
+                  Learn More
+                </button>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Extra Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-black">
-          <div className="backdrop-blur-md bg-white/10 p-6 rounded-2xl text-center border border-white/20">
-            <h3 className="text-xl font-semibold mb-2">Our Mission</h3>
-            <p className="text-sm">
-              Affordable and quality healthcare for all.
+        {/* ================= EXTRA CARDS ================= */}
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-14">
+          {/* CARD 1 */}
+          <div className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 backdrop-blur-2xl p-6 text-center shadow-[0_10px_40px_rgba(0,0,0,0.4)] hover:-translate-y-2 transition-all duration-500 animate-fadeUp">
+            <div className="absolute top-0 right-0 w-[8rem] h-[8rem] bg-cyan-400/10 blur-[80px] rounded-full"></div>
+
+            <h3 className="text-2xl font-black text-white mb-3">Our Mission</h3>
+
+            <p className="text-gray-400 leading-7">
+              Delivering affordable and quality healthcare services for everyone
+              with compassion.
             </p>
           </div>
 
-          <div className="backdrop-blur-md bg-white/10 p-6 rounded-2xl text-center border border-white/20">
-            <h3 className="text-xl font-semibold mb-2">Our Vision</h3>
-            <p className="text-sm">To become a leading trusted hospital.</p>
+          {/* CARD 2 */}
+          <div className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 backdrop-blur-2xl p-6 text-center shadow-[0_10px_40px_rgba(0,0,0,0.4)] hover:-translate-y-2 transition-all duration-500 animate-fadeUp">
+            <div className="absolute top-0 right-0 w-[8rem] h-[8rem] bg-blue-400/10 blur-[80px] rounded-full"></div>
+
+            <h3 className="text-2xl font-black text-white mb-3">Our Vision</h3>
+
+            <p className="text-gray-400 leading-7">
+              To become one of the most trusted and advanced healthcare
+              institutions in India.
+            </p>
           </div>
 
-          <div className="backdrop-blur-md bg-white/10 p-6 rounded-2xl text-center border border-white/20">
-            <h3 className="text-xl font-semibold mb-2">24/7 Care</h3>
-            <p className="text-sm">Emergency support anytime.</p>
+          {/* CARD 3 */}
+          <div className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 backdrop-blur-2xl p-6 text-center shadow-[0_10px_40px_rgba(0,0,0,0.4)] hover:-translate-y-2 transition-all duration-500 animate-fadeUp">
+            <div className="absolute top-0 right-0 w-[8rem] h-[8rem] bg-purple-400/10 blur-[80px] rounded-full"></div>
+
+            <h3 className="text-2xl font-black text-white mb-3">
+              Emergency Care
+            </h3>
+
+            <p className="text-gray-400 leading-7">
+              Reliable emergency support and critical care services available
+              whenever needed.
+            </p>
           </div>
         </div>
       </div>
