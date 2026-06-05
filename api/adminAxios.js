@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export const adminApi = axios.create({
-  baseURL: "http://localhost:3000/api",
+  baseURL: "https://hospital-ba.onrender.com/api",
 });
